@@ -1,0 +1,444 @@
+<style>
+#sideBareMenuGaucheFacturation{ visibility: hidden }
+
+#sideBareMenuGaucheFacturation{ min-width:200px; max-width: 430px;}
+</style>
+
+
+
+
+<script>
+$(window).load(function () {
+
+	$('#waitMenuGaucheFacturation').toggle(false);
+	$('#sideBareMenuGaucheFacturation').fadeIn().css({'visibility':'visible'});
+	 
+});
+</script>
+
+<div id="waitMenuGaucheFacturation" style="color: #cccccc; font-size: 13px;  margin-top: 80px;  margin-left: 60px;" > <span> Chargement ... </span> </div>
+
+
+<ul id="sideBareMenuGaucheFacturation">
+
+
+<!-- MENU ***gynecologie*** -->
+<li id="gynecologie"><a href="">
+<span style="margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;"> <img id="image" style="display: inline;" src='<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> Gynecologie </span></a> 
+</li>
+
+<li id="plus_gynecologie" style="background: #4a5765;" >
+
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/gynecologie/gynecologie";?>"  >
+   <span id="admission_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/dossier.PNG'?>' alt='Liste' /> En Cours...</span></a>
+</div>
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/gynecologie/liste-des-gynecologies";?>"  >
+   <span id="admission_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/liste.PNG'?>' alt='Liste' /> Historiques</span></a>
+</div>
+
+</li>
+
+
+<!-- MENU ***Prenatales*** -->
+<li id="prenatale"><a href="">
+<span style="margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;"> <img id="image" style="display: inline;" src='<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> Pr&eacute;natales </span></a> 
+</li>
+
+<li id="plus_prenatale" style="background: #4a5765;" >
+
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/maternite/consultation-medecin";?>"  >
+   <span id="admission_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/dossier.PNG'?>' alt='Liste' /> En Cours...</span></a>
+</div>
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/maternite/liste-des-prenatales";?>"  >
+   <span id="admission_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/liste.PNG'?>' alt='Liste' /> Historiques</span></a>
+</div>
+
+</li>
+
+
+<!-- MENU ***Gestionsms*** -->
+<li id="gestionsms"><a href="">
+<span style="margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;"> <img id="image" style="display: inline;" src='<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> Gestion sms </span></a> 
+</li>
+
+<li id="plus_gestionsms" style="background: #4a5765;" >
+
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/accouchement/liste-destinataires";?>"  >
+   <span id="liste_destinataires_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/dossier.PNG'?>' alt='Liste' /> Destinataires</span></a>
+</div>
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/accouchement/historique-des-destinataires";?>"  >
+   <span id="historique_destinataires_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/liste.PNG'?>' alt='Liste' /> Historiques</span></a>
+</div>
+</li>
+
+<!-- MENU ***Accouchement*** -->
+<li id="accouchement"><a href="">
+<span style="margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;"> <img id="image" style="display: inline;" src='<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> Accouchement </span></a> 
+</li>
+
+<li id="plus_accouchement" style="background: #4a5765;" >
+
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/accouchement/accoucher";?>"  >
+   <span id="admission_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/dossier.PNG'?>' alt='Liste' /> En Cours...</span></a>
+</div>
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/accouchement/liste-des-accouchements";?>"  >
+   <span id="admission_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/liste.PNG'?>' alt='Liste' /> Historiques</span></a>
+</div>
+</li>
+
+
+
+<!-- MENU ***Postnatale*** -->
+<li id="postnatale"><a href="">
+<span style="margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;"> <img id="image" style="display: inline;" src='<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> Postnatale </span></a> 
+</li>
+
+<li id="plus_postnatale" style="background: #4a5765;" >
+
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/postnatale/postnatale";?>"  >
+   <span id="admission_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/dossier.PNG'?>' alt='Liste' /> En Cours...</span></a>
+</div>
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/postnatale/liste-des-postnatales";?>"  >
+   <span id="admission_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/liste.PNG'?>' alt='Liste' /> Historiques</span></a>
+</div>
+
+</li>
+
+<!-- MENU ***Planification*** -->
+<li id="planification"><a href="">
+<span style="margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;"> <img id="image" style="display: inline;" src='<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> Planification </span></a> 
+</li>
+
+<li id="plus_planification" style="background: #4a5765;" >
+
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/planification/planification";?>"  >
+   <span id="admission_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/dossier.PNG'?>' alt='Liste' /> En Cours...</span></a>
+</div>
+<div style="margin-left:30px; height:40px; padding-top:20px;"><a href="<?php echo $this->basePath()."/planification/liste-des-planifications";?>"  >
+   <span id="admission_style" style="margin-left:5px; color: white; font-size:15px; font-family:Times New Roman;"><img style="display: inline;" src='<?php echo $this->basePath().'/images_icons/liste.PNG'?>' alt='Liste' /> Historiques</span></a>
+</div>
+</li>
+
+
+
+
+	<!-- MENU ***Statistiques*** -->
+
+
+<li id="menu_statistiques"><a href="">
+	    <span style="margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;"> <img id="image" style="display: inline;" src='<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' /> Statistiques</span></a> 
+	</li>
+	
+	<li id="plus_menu_statistiques" style="background: #4a5765;" >
+
+	   <div id="menuDesStatistiques" style="margin-left:30px; height:40px; padding-top:20px;"> <a href="<?php echo $this->basePath()."/accouchement/statistique";?>" > 
+	       <img style="margin-left:5px; margin-top: -7px; width: 16px; height: 16px;" src='<?php echo $this->basePath().'/images_icons/statistics_16.png'?>' />
+	       <span id="menu_statistiques_style" style="font-size:15px; color: white; font-family:Times New Roman;">Informations</span></a>
+	   </div>
+	   
+	</li>
+	
+
+	
+
+	
+	
+</ul>
+
+
+
+<?php
+//CHOISIR LE MENU A AFFICHER SELON QUE C'EST LE MEDECIN OU C'EST LE SURVEILLANT
+$user = $this->layout()->user;
+$role = $user['role'];
+
+if($role == 'infirmier'){ ?>
+<script>
+$("#hospi").toggle(false);
+
+</script>
+<?php
+}
+else if($role == 'medecin'|| $role=='gynecologue'){ ?>
+<script>
+$("#hospit,#accouchement,#postnatale,#planification,#menu_statistiques").toggle(false);
+
+</script>
+
+
+
+<?php
+}
+if(( $role=='sage_femme')||($role=='gynecologue')){ ?>
+ //<script> 
+ //$("#accouchement").toggle(false);
+ //$("#prenatale").toggle(false);
+ //$("#postnatale").toggle(false);
+ //$("#planification").toggle(false);
+ 
+//</script> 
+
+
+
+<?php
+     }
+?>
+<script>
+
+
+
+//gynecologie
+
+
+function dep_gynecologie1(){
+	$('#gynecologie').click(function(){
+		$("#gynecologie").replaceWith("<li id='gynecologie'><a href=''><span style='margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> Gynecologie </span></a></li>");
+		dep_postnatale2();
+	    $('#plus_gynecologie').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+
+function dep_gynecologie2(){
+	$('#gynecologie').click(function(){
+		$("#gynecologie").replaceWith("<li id='gynecologie' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' /> Gynecologie </span></a></li>");
+		dep_postnatale1();
+	    $('#plus_gynecologie').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+
+$('#plus_gynecologie').toggle(false);
+$('#gynecologie').click(function(){
+	$("#gynecologie").replaceWith("<li id='gynecologie' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' /> Gynecologie</span></a></li>");
+	dep_gynecologie1();
+$('#plus_gynecologie').animate({
+height : 'toggle'
+},1000);
+return false;
+});
+
+
+function dep_prenatale1(){
+	$('#prenatale').click(function(){
+		$("#prenatale").replaceWith("<li id='prenatale'><a href=''><span style='margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> Pr&eacute;natale </span></a></li>");
+		dep_prenatale2();
+	    $('#plus_prenatale').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+function dep_prenatale2(){
+	$('#prenatale').click(function(){
+		$("#prenatale").replaceWith("<li id='prenatale' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' />Pr&eacutenatale </span></a></li>");
+		dep_prenatale1();
+	    $('#plus_prenatale').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+$('#plus_prenatale').toggle(false);
+$('#prenatale').click(function(){
+	$("#prenatale").replaceWith("<li id='prenatale' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' /> Pr&eacute;natale</span></a></li>");
+	dep_prenatale1();
+$('#plus_prenatale').animate({
+    height : 'toggle'
+},1000);
+return false;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+function dep_accouchement1(){
+	$('#accouchement').click(function(){
+		$("#accouchement").replaceWith("<li id='accouchement'><a href=''><span style='margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> Accouchement </span></a></li>");
+		dep_accouchement2();
+	    $('#plus_accouchement').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+function dep_accouchement2(){
+	$('#accouchement').click(function(){
+		$("#accouchement").replaceWith("<li id='accouchement' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' /> Accouchement </span></a></li>");
+		dep_accouchement1();
+	    $('#plus_accouchement').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+$('#plus_accouchement').toggle(false);
+$('#accouchement').click(function(){
+	$("#accouchement").replaceWith("<li id='accouchement' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' /> Accouchement</span></a></li>");
+	dep_accouchement1();
+$('#plus_accouchement').animate({
+    height : 'toggle'
+},1000);
+return false;
+});
+
+//postnatale
+
+
+function dep_postnatale1(){
+	$('#postnatale').click(function(){
+		$("#postnatale").replaceWith("<li id='postnatale'><a href=''><span style='margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> postnatale </span></a></li>");
+		dep_postnatale2();
+	    $('#plus_postnatale').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+function dep_postnatale2(){
+	$('#postnatale').click(function(){
+		$("#postnatale").replaceWith("<li id='postnatale' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' /> Postnatale </span></a></li>");
+		dep_postnatale1();
+	    $('#plus_postnatale').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+$('#plus_postnatale').toggle(false);
+$('#postnatale').click(function(){
+	$("#postnatale").replaceWith("<li id='postnatale' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' /> Postnatale</span></a></li>");
+	dep_postnatale1();
+$('#plus_postnatale').animate({
+    height : 'toggle'
+},1000);
+return false;
+});
+//planification familiale
+
+
+function dep_planification1(){
+	$('#planification').click(function(){
+		$("#planification").replaceWith("<li id='planification'><a href=''><span style='margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> planification </span></a></li>");
+		dep_planification2();
+	    $('#plus_planification').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+function dep_planification2(){
+	$('#planification').click(function(){
+		$("#planification").replaceWith("<li id='planification' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' /> planification </span></a></li>");
+		dep_planification1();
+	    $('#plus_planification').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+$('#plus_planification').toggle(false);
+$('#planification').click(function(){
+	$("#planification").replaceWith("<li id='planification' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' /> planification</span></a></li>");
+	dep_planification1();
+$('#plus_planification').animate({
+    height : 'toggle'
+},1000);
+return false;
+});
+
+//Statistiques
+function dep_menu_statistiques1(){
+$('#menu_statistiques').click(function(){
+	$("#menu_statistiques").replaceWith("<li id='menu_statistiques'><a style='cursor: pointer;'><span style='margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman; cursor: pointer;'> <img style='display: inline;' src='../images_icons/plus-green1.png' alt='Liste' /> Statistiques </span></a></li>");
+	dep_menu_statistiques2();
+$('#plus_menu_statistiques').animate({
+    height : 'toggle'
+},1000);
+return false;
+});
+}
+
+function dep_menu_statistiques2(){
+$('#menu_statistiques').click(function(){
+	$("#menu_statistiques").replaceWith("<li id='menu_statistiques' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src='../images_icons/moin-green2.png' alt='Liste' /> Statistiques </span></a></li>");
+	dep_menu_statistiques1();
+$('#plus_menu_statistiques').animate({
+    height : 'toggle'
+},1000);
+return false;
+});
+}
+
+$('#plus_menu_statistiques').toggle(false);
+$('#menu_statistiques').click(function(){
+$("#menu_statistiques").replaceWith("<li id='menu_statistiques' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src='../images_icons/moin-green2.png' alt='Liste' /> Statistiques </span></a></li>");
+dep_menu_statistiques1();
+$('#plus_menu_statistiques').animate({
+height : 'toggle'
+},1000);
+return false;
+});
+
+
+//Gestion sms
+
+function dep_gestionsms1(){
+	$('#gestionsms').click(function(){
+		$("#gestionsms").replaceWith("<li id='gestionsms'><a href=''><span style='margin-left:0px; color: #48ce77; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/plus-green1.png'?>' alt='Liste' /> Gestion sms </span></a></li>");
+		dep_gestionsms2();
+	    $('#plus_gestionsms').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+function dep_gestionsms2(){
+	$('#gestionsms').click(function(){
+		$("#gestionsms").replaceWith("<li id='gestionsms' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' /> Gestion sms </span></a></li>");
+		dep_gestionsms();
+	    $('#plus_gestionsms').animate({
+	        height : 'toggle'
+	    },1000);
+	 return false;
+	});
+}
+
+$('#plus_gestionsms').toggle(false);
+$('#gestionsms').click(function(){
+	$("#gestionsms").replaceWith("<li id='gestionsms' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src=   '<?php echo $this->basePath().'/images_icons/moin-green2.png'?>' alt='Liste' /> Gestion sms</span></a></li>");
+	dep_gestionsms1();
+$('#plus_gestionsms').animate({
+    height : 'toggle'
+},1000);
+return false;
+});
+
+
+
+
+</script>
+
