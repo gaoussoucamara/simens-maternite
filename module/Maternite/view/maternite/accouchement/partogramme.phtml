@@ -1,0 +1,78 @@
+<?php
+
+echo $this->headLink()->appendStylesheet($this->basePath().'/css/pikachoose/bottom.css');
+echo  $this->headScript()->appendFile($this->basePath().'/js/plugins/jqueryCharts/canvasjs.min.js');
+echo  $this->headScript()->appendFile($this->basePath().'/js/plugins/jqueryCharts/jquery.canvasjs.min.js');
+?>
+
+
+
+<?php
+$form = $this->form;
+$forms = $this->forms;
+$form->setName ( 'AVIS' );
+$form->setAttribute ( 'action', $this->url ( 'accouchement', array (
+		'action' => 'impression-Pdf' 
+) ) );
+$form->setAttribute ( 'target', '_blank' );
+$form->setAttribute ( 'method', 'post' );
+$form->prepare ();
+echo $this->form ()->openTag ( $form );
+?>
+			<script type="text/javascript">
+	window.onload = function() {
+		var chart = new CanvasJS.Chart("chartContainer", {
+			title: {
+				text: "Partogramme"
+			},
+			
+			axisX: {
+				interval: 10
+			},
+			data: [{
+		        type: "line",
+
+		        dataPoints: [
+		        { x: new Date(2012, 00, 1), y: 450 },
+		        { x: new Date(2012, 01, 1), y: 414 },
+		        { x: new Date(2012, 02, 1), y: 520 },
+		        { x: new Date(2012, 03, 1), y: 460 },
+		        { x: new Date(2012, 04, 1), y: 450 },
+		        { x: new Date(2012, 05, 1), y: 500 },
+		        { x: new Date(2012, 06, 1), y: 480 },
+		        { x: new Date(2012, 07, 1), y: 480 },
+		        { x: new Date(2012, 08, 1), y: 410 },
+		        { x: new Date(2012, 09, 1), y: 500 },
+		        { x: new Date(2012, 10, 1), y: 480 },
+		        { x: new Date(2012, 11, 1), y: 510 }
+		        ]
+		      }]
+		});
+		chart.render();
+	}
+	</script>
+		<table style='width:95%; margin-left: 10px; align:center' class="table table-bordered tab_list_mini" id="patient">
+			<thead >
+			    <tr >
+				    <th id="nom" style='width: 15%;'><input type="text" name="nom" value=" Nom" class="" /></th>
+					<th id="gestite" style='width: 15%;'><input type="text" name="gestite" value=" Gestit&eacute;" class="" /></th>
+					<th id="parite" style='width: 17%;'><input type="text" name="parite" value=" Parit&eacute;" class="" /></th>
+					<th id="nom_" style='width: 7%;'><input type="text" name="search_browser" value=" Age" class="search_init" /></th>
+				<!--  	<th id="nom_" style='width: 13%;'><input type="text" name="search_browser" value=" Sexe" class="search_init" /></th>-->
+					<th id="adresse_" style='width: 25%;'><input type="text" name="search_browser" value=" Adresse" class="search_init" /></th>
+					<th id="effectuer_" style='width: 8%;'><input type="hidden" value="" class="" />Options</th>
+
+				</tr>
+
+			</thead>
+
+			<tbody id="donnees" class="liste_patient">
+
+	            <?php /* AFFICHAGE DE LA LISTE DES PATIENTS */?>
+
+			</tbody>
+
+		</table>
+			
+
+	<div id="chartContainer" style="height: 400px; width: 100%;"></div>
