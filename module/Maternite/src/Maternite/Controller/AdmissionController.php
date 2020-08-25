@@ -295,12 +295,14 @@ class AdmissionController extends AbstractActionController {
 	
 			$date_naissance = $this->params ()->fromPost ( 'DATE_NAISSANCE' );
 			if($date_naissance){ $date_naissance = $Control->convertDateInAnglais($this->params ()->fromPost ( 'DATE_NAISSANCE' )); }else{ $date_naissance = null;}
-	
+			$telephone = $this->params ()->fromPost ( 'TELEPHONE' );
+			$telephone = preg_replace('/[^0-9]/', '',$telephone);
 			$donnees = array(
 					'LIEU_NAISSANCE' => $this->params ()->fromPost ( 'LIEU_NAISSANCE' ),
 					'EMAIL' => $this->params ()->fromPost ( 'EMAIL' ),
 					'NOM' => $this->params ()->fromPost ( 'NOM' ),
-					'TELEPHONE' => $this->params ()->fromPost ( 'TELEPHONE' ),
+					'TELEPHONE' => $telephone,
+					//'TELEPHONE' => $this->params ()->fromPost ( 'TELEPHONE' ),
 					'NATIONALITE_ORIGINE' => $this->params ()->fromPost ( 'NATIONALITE_ORIGINE' ),
 					'PRENOM' => $this->params ()->fromPost ( 'PRENOM' ),
 					'PROFESSION' => $this->params ()->fromPost ( 'PROFESSION' ),
@@ -313,7 +315,7 @@ class AdmissionController extends AbstractActionController {
 					//'NUMERO_DOSSIER' => $this->params ()->fromPost ( 'NUMERO_DOSSIER' ),
 			);
 				
-				
+				//var_dump($telephone);exit();
 				
 			if ($img != false) {
 	
